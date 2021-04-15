@@ -48,3 +48,5 @@ C:\Users\Ahmed.Abdelgayed\Desktop\Projects\ServicingAPI\obj\Debug\net5.0\Servici
 C:\Users\Ahmed.Abdelgayed\Desktop\Projects\ServicingAPI\obj\Debug\net5.0\ref\ServicingAPI.dll
 C:\Users\Ahmed.Abdelgayed\Desktop\Projects\ServicingAPI\obj\Debug\net5.0\ServicingAPI.pdb
 C:\Users\Ahmed.Abdelgayed\Desktop\Projects\ServicingAPI\obj\Debug\net5.0\ServicingAPI.genruntimeconfig.cache
+C:\Users\Ahmed.Abdelgayed\Desktop\Projects\ServicingAPI\bin\Debug\net5.0\Logs\CustomerAPI-20210408.json
+C:\Users\Ahmed.Abdelgayed\Desktop\Projects\ServicingAPI\bin\Debug\net5.0\Logs\CustomerAPI-20210409.json
