@@ -9,6 +9,8 @@ using Microsoft.IdentityModel.Tokens;
 using ServicingAPI.Classes;
 using ServicingAPI.HealthChecks;
 using ServicingAPI.Helpers;
+using ServicingAPI.Interfaces;
+using ServicingAPI.Services;
 
 namespace ServicingAPI
 {
@@ -27,6 +29,9 @@ namespace ServicingAPI
 
             services.AddControllers();
             services.AddHttpContextAccessor();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ISubmitDealService, SubmitDealService>();
+
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1",
@@ -37,8 +42,6 @@ namespace ServicingAPI
                         Version = "v1"
                     });
             });
-
-            
             
             // configure strongly typed settings object for Authentication
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
@@ -70,7 +73,7 @@ namespace ServicingAPI
             RubiDBSettings rubiDbSettings = Configuration.GetSection(nameof(RubiDBSettings)).Get<RubiDBSettings>();
             services.AddSingleton<RubiDBSettings>(rubiDbSettings);
 
-            // Register Heath Checks
+            // Register Heatlh Checks
             services.AddHealthChecks().AddCheck("DB Health Check", () => DBHealthCheckProvider.Check(rubiDbSettings.ConnectionString));  
         }
 
